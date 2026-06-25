@@ -1,14 +1,16 @@
-import java.util.*;
+import java.util.HashSet;
+import java.util.Scanner;
 
-public class Question2 {
+public class DetermineGender {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String username = sc.next();
+
+        String username = sc.nextLine();
 
         HashSet<Character> set = new HashSet<>();
 
         for (char ch : username.toCharArray()) {
-            set.add(ch); 
+            set.add(ch);
         }
 
         if (set.size() % 2 == 0) {
@@ -16,5 +18,7 @@ public class Question2 {
         } else {
             System.out.println("IGNORE HIM!");
         }
+
+        sc.close();
     }
 }

@@ -1,17 +1,16 @@
 import java.util.*;
 
-public class Question2 {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String username = sc.next();
+        String s = sc.next();
 
-        HashSet<Character> set = new HashSet<>();
-
-        for (char ch : username.toCharArray()) {
-            set.add(ch); 
+        Set<Character> distinct = new HashSet<>();
+        for (char c : s.toCharArray()) {
+            distinct.add(c);
         }
 
-        if (set.size() % 2 == 0) {
+        if (distinct.size() % 2 == 0) {
             System.out.println("CHAT WITH HER!");
         } else {
             System.out.println("IGNORE HIM!");
